@@ -1,0 +1,17 @@
+name: "SimulatedSensor-01"
+profileName: "SimulatedSensor"
+description: "Pymodbus TCP simulator - sensor unit 01"
+labels:
+  - simulator
+  - temperature
+  - pressure
+  - humidity
+protocols:
+  modbus-tcp:
+    Host: "172.17.0.1"
+    Port: "5020"
+    UnitID: "1"
+autoEvents:
+  - interval: "10s"
+    onChange: false
+    sourceName: AllReadings
